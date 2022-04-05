@@ -1,14 +1,32 @@
+# locations:
+#   # Code location name
+#   github_action_demo_requirements_txt:
+#     # Path to directory containing either requirements.txt file or Dockerfile,
+#     # relative to the locations.yaml file
+#     build: .
+
+#     # The base Docker image to install your code in
+#     # If providing a custom Dockerfile, this line is not needed
+#     base_image: python:3.8-slim
+
+#     # Fill in your Docker registry here, on Dockerhub, ECR, GCR, etc.
+#     registry: pmzet/dagster-cicd
+#     python_file: repositories/repo.py
+
 locations:
-  # Code location name
-  github_action_demo_requirements_txt:
-    # Path to directory containing either requirements.txt file or Dockerfile,
-    # relative to the locations.yaml file
-    build: .
-
-    # The base Docker image to install your code in
-    # If providing a custom Dockerfile, this line is not needed
-    base_image: python:3.8-slim
-
-    # Fill in your Docker registry here, on Dockerhub, ECR, GCR, etc.
+  github_action_demo_foo:
+    build: ./foo
     registry: pmzet/dagster-cicd
-    python_file: repositories/repo.py
+    package_name: foo
+    attribute: foo_repo
+  github_action_demo_other_foo:
+    build: ./foo
+    registry: pmzet/dagster-cicd
+    module_name: foo
+    attribute: other_foo_repo
+  github_action_demo_bar:
+    build: ./bar
+    registry: pmzet/dagster-cicd
+    python_file: repo.py
+    working_directory: /opt/dagster/app
+    executable_path: python
