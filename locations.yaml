@@ -1,6 +1,6 @@
 locations:
   # Code location name
-  github_action_template_foo:
+  github_action_demo_requirements_txt:
     # Path to directory containing either requirements.txt file or Dockerfile,
     # relative to the locations.yaml file
     build: .
@@ -11,4 +11,4 @@ locations:
 
     # Fill in your Docker registry here, on Dockerhub, ECR, GCR, etc.
     registry: pmzet/dagster-cicd
-    python_file: repo.py
+    python_file: repositories/repo.py
