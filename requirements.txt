@@ -1,2 +1,2 @@
-dagster
-dagster-cloud
+dagster==0.12.14
+dagster-cloud==0.12.14
