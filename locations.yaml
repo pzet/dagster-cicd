@@ -10,5 +10,5 @@ locations:
     base_image: python:3.8-slim
 
     # Fill in your Docker registry here, on Dockerhub, ECR, GCR, etc.
-    registry: https://hub.docker.com/r/pmzet/dagster-cicd
+    registry: pmzet/dagster-cicd
     python_file: repo.py
